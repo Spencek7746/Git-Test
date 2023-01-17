@@ -15,13 +15,21 @@ namespace CW2_Getting_Into_Git
     {
         static void Main(string[] args)
         {
-            Random randNum = new Random(); //Random number object is created.
-            Console.WriteLine("I'm thinking of a number between 0 and 100...which number am I thinking of?");
+            Console.WriteLine("Please enter the lower bound"); //Initialize lower bound
+            String min = Console.ReadLine();
+            Console.WriteLine("Please enter the upper bound"); //Initialize upper bound
+            String max = Console.ReadLine();
 
-            int max = 100;
-            int min = 0;
-            int num = randNum.Next(min, max); //Integer variable num is set to Random object
-            int userTries = 0;
+            Random randNum = new Random(); //Random number object is created.
+            int num = randNum.Next(Int32.Parse(min), Int32.Parse(max)); //Integer variable num is set to Random object
+
+            Console.Write("I'm thinking of a number between " + min);
+            Console.Write(" and ");
+            Console.Write(max);
+            Console.Write(" ...which number am I thinking of?");
+            Console.WriteLine();
+
+            int userTries = 0; //Counter for the number of attempts made to guess the number.
             bool correct = false; //To check if the user is correct. This will help with looping.
 
             while (!correct) //While loop to grab constant user input as long as the user isn't correct.
