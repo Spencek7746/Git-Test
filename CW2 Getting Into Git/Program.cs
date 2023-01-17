@@ -29,7 +29,7 @@ namespace CW2_Getting_Into_Git
             Console.Write(" ...which number am I thinking of?");
             Console.WriteLine();
 
-            int userTries = 0; //Counter for the number of attempts made to guess the number.
+            int userTries = 1; //Counter for the number of attempts made to guess the number.
             bool correct = false; //To check if the user is correct. This will help with looping.
 
             while (!correct) //While loop to grab constant user input as long as the user isn't correct.
